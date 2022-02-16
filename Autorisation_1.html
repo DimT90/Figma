@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercise-1.css">
+    <title>Autorisation</title>
+</head>
+
+<body>
+    <div class="container-vertical-center">
+        <div>
+            <form>
+                <div class="field" margin-top="20%">
+                    <input type="email" placeholder="E-MAIL" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="forgot-password">
+                    <a href="#popup" title="jopa">Forgot password</a>
+                </div>
+
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <a href="#" class="popup_area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#" class="popup_close">X</a>
+                <div class="popup_title">Forgot password</div>
+                <div class="popup_text">
+                    We’ll email you a link to reset your password
+
+                </div>
+                <div class="email2">
+                    <input type="email" placeholder="E-MAIL2" required>
+                </div>
+                <button class="cancel">Cancel</button>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="sending">
+            <p>We sent you an email with a link to complete a password reset</p>
+        </div>
+    </footer>
+</body>
+
+</html>

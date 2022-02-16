@@ -1,0 +1,160 @@
+body {
+  background: #e5e5e5;
+  height: 100%;
+}
+.field input {
+  width: 424px;
+  height: 56px;
+  background: white;
+  border-radius: 10px;
+  margin: 10px auto auto 30%;
+}
+.container-vertical-center {
+  margin-top: 20%;
+  min-height: 100%;
+}
+input[placeholder] {
+  font-size: 16px;
+  color: black;
+  padding-left: 10px;
+}
+
+.forgot-password {
+  margin: 20px auto auto 30%;
+  font-weight: bold;
+  font-family: sans-serif;
+  height: 20px;
+}
+.forgot-password a:hover {
+  color: rgb(29, 167, 75);
+  font-size: 20px;
+}
+button {
+  width: 424px;
+  height: 56px;
+  margin: 20px auto auto 30%;
+  background: #256487;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: whitesmoke;
+}
+button:hover {
+  background-color: cadetblue;
+  color: black;
+}
+
+div.sending {
+  margin: auto 5% 5% auto;
+  width: 274px;
+  height: 58px;
+  background: #323232;
+  border-radius: 5px;
+  position: relative;
+  vertical-align: bottom;
+}
+div.sending p {
+  color: white;
+  padding-left: 50px;
+  position: absolute;
+  top: 20%;
+  transform: translate(0, -50%);
+}
+.email2 input {
+  width: 376px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin: 20px auto auto auto;
+}
+button.cancel {
+  width: 176px;
+  height: 56px;
+  margin: 25px auto auto auto;
+}
+button.reset {
+  width: 176px;
+  height: 56px;
+  margin: 25px auto auto 24px;
+  background: rgba(37, 100, 135, 0.32);
+}
+footer {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.774);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto; /*скроллит попап*/
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s; /*плавная анимация попап*/
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+/*к плавному появлению popup_content*/
+.popup:target .popup_content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+.popup_area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/*не работает на белой области, потому что див popup_content наложен на popup_area?*/
+.popup_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup_content {
+  background-color: #fff;
+  color: black;
+  max-width: 424px;
+  max-height: 283px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.8s ease 0s; /*к плавному появлению popup_content*/
+  opacity: 0; /*к плавному появлению popup_content*/
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg); /*к плавному появлению popup_content*/
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+.popup_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+.popup_title {
+  font-size: 20px;
+  margin: 0px 0px 1em 0px;
+  font-family: roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  color: #212121;
+}
+.popup_text {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: normal;
+  text-align: left;
+}
